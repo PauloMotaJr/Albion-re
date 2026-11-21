@@ -1,0 +1,15 @@
+/* Estilos básicos opcionais para Albion Market & Craft */
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}

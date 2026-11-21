@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: albion_db
+    environment:
+      POSTGRES_DB: ${DB_NAME:-albion_market}
+      POSTGRES_USER: ${DB_USER:-albin_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - albion_internal
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-albin_user} -d ${DB_NAME:-albion_market}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: albion_web
+    command: gunicorn albionmarket.wsgi:application --bind 127.0.0.1:8000 --workers 2 --threads 4 --timeout 120
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - albion_internal
+
+volumes:
+  db_data:
+    driver: local
+
+networks:
+  albion_internal:
+    driver: bridge

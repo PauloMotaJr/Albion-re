@@ -1,0 +1,33 @@
+# --- Python / Django ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+db_data/
+
+# --- Django specific ---
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.mypy_cache_*/
+.coverage
+htmlcov/
+.env              # Arquivos .env com credenciais (excluídos do Git)
+
+# --- Django management commands ---
+albionmarket/.pyc
+albionmarket/__pycache__/
+albionmarket/views/__pycache__/
+
+# --- IDE / Editor ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS específico ---
+.DS_Store
+Thumbs.db

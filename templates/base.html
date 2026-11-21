@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Albion Market & Craft{% endblock %}</title>
+    
+    <!-- Carrega stylesheets se existirem -->
+    {% if STATICFILES_DIRS %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endif %}
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+        
+        <footer>
+            <p>&copy; 2026 Albion Market & Craft - Fase 1 (Infraestrutura)</p>
+        </footer>
+    </div>
+</body>
+</html>

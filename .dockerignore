@@ -1,0 +1,24 @@
+# --- Python / Django ---
+venv/
+env/
+.env*
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# --- Git ---
+.git/
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- OS específico ---
+.DS_Store
+Thumbs.db
+
+# --- Build optimization ---
+__pycache__/
+*.pyc
