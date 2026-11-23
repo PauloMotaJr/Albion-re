@@ -2,7 +2,6 @@
 URL configuration for Albion Market & Craft project.
 """
 
-from django.contrib import admin
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.urls import path
@@ -39,9 +38,3 @@ def home(request):
 urlpatterns = [
     path("", home, name="home"),
 ]
-
-admin.site.register("contenttypes.ContentType")
-admin.site.register("auth.Group")
-admin.site.unregister("auth.Permission")
-admin.site.site_header = "Albion Market & Craft"
-admin.site.index_title = "Admin (não disponível)"

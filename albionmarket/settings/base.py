@@ -78,7 +78,11 @@ LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO").upper()
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "formatters": {"verbose": {"format": "{levelname} {asctime} {module} {message}", "style": "{}"},},
+    "formatters": {
+        "verbose": {
+            "format": "%(levelname)s %(asctime)s %(module)s %(message)s",
+        },
+    },
     "handlers": {
         "console": {
             "class": "logging.StreamHandler",
@@ -87,7 +91,11 @@ LOGGING = {
         },
     },
     "loggers": {
-        "albionmarket": {"handlers": ["console"], "level": LOG_LEVEL, "propagate": False},
+        "albionmarket": {
+            "handlers": ["console"],
+            "level": LOG_LEVEL,
+            "propagate": False,
+        },
     },
 }
 
