@@ -1,5 +1,5 @@
 # Albion Market & Craft - Fase 1: Infraestrutura
-
+# É um mmo RPG
 ## Visão Geral
 
 Esta é a **Fase 1** do projeto, focada em estabelecer uma infraestrutura sólida com Django + PostgreSQL + Docker Compose.
