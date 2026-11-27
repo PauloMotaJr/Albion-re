@@ -1,5 +1,5 @@
 # Albion Market & Craft - Fase 1: Infraestrutura
-
+# É um mmo RPG
 ## Visão Geral
 
 Esta é a **Fase 1** do projeto, focada em estabelecer uma infraestrutura sólida com Django + PostgreSQL + Docker Compose.
@@ -173,3 +173,4 @@ psql -U albin_user -d albion_market -c "SHOW DATABASES;"
 ## Licença
 
 [Inserir licença aqui - por padrão Apache 2.0 ou MIT]
+Teste Pair Extraordinaire
